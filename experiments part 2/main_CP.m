@@ -45,6 +45,7 @@ N_vec = [500 200]; % numbers of particles for SMC for CP and TD, resp.
 Num_of_exp = 10; % Number of parallel chains
 P = 1; % number of parallel SMC systems: In the paper, this is 1.
 
+% Run the algorithm pMCMC
 outputs = cell(Num_of_exp, 1);
 parfor i = 1:Num_of_exp
     disp(i);
