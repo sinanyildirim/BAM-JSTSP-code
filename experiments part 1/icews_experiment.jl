@@ -12,18 +12,18 @@ using .Viz_Logs, .Experiments, .Misc, .CP, .TD
 using FileIO, Dates, JSON, CSV, LinearAlgebra, NPZ, Distributions, Plots
 using Base.Iterators: flatten
 
-# 3750 17730 35190 78500 123140      OLD: 3610 17780 30880 74630 120540
-data_name = "2017_week_0.5_quantile_quad_20_countries"
-exp_type = "cp"
+# 3750 17730 35190 78500 123140
+data_name = "icews_0.99_data" # choices are icews_{}_data where {} can take 0.99, 0.95, 0.9, 0.75, 0.5
+exp_type = "cp_comparison" # this is up to the user
 exp_name = "$(data_name)_$(exp_type)"
 icews_data_file_prefix = "data/icews/$(data_name)"
-meths = [(CP, "smc"), (CP, "vb")] #[(CP, "smc"), (CP, "vb")] 
-M = [10, 10]
-adaptive = true
+meths = [(CP, "smc"), (CP, "vb")] # choices should be made from (CP, "smc"), (CP, "vb"), (TD, "smc"), and (TD, "vb")
+M = [10, 10] # length of M should be equal to that of meths
+adaptive = true # choicese are: true, false
 # Resampling is default, if you want to prevent resampling, set resampling freq to T
-resampling_freq = 20
+resampling_freq = 20 # choices range from 1 to total number of observations
 resampling_freq = adaptive ? 0 : resampling_freq
-resampling_scheme = "systematic"
+resampling_scheme = "systematic" # chocies are: "systematic", "multinomial"
 
 X, country_dict, quad_class_dict, sequence = read_and_convert_icews_data(icews_data_file_prefix);
 
