@@ -2,18 +2,20 @@
 
 The experiments in this part include:
 
-- The synthetic data experiments presented in the first subsection of the results
-- The international relations data experiments presented in the second subsection of the results
+- The synthetic data experiments presented in the first subsection of the experiments section of the paper.
+- The international relations data experiments presented in the second subsection of the experiments section of the paper.
 
 ## Software requirements:
 
-The experiments in this section are conducted using Linux OS and Julia programming language version 1.0.5, as well as Jupyter Notebook/Lab with the Julia kernel. Please visit https://julialang.org/ for information regarding installing Julia and its Jupyter notebook kernel.
+The experiments in this section are conducted using Linux OS and Julia programming language version 1.0.5, as well as Jupyter Notebook/Lab with the corresponding Julia kernel. Please visit https://julialang.org/ for information regarding installing Julia and its Jupyter notebook kernel.
 
-After installing Julia 1.0.5, the packages required by the experiments can be installed by executing the script requirements.jl running the command in this folder:
+After installing Julia 1.0.5, the packages required by the experiments can be installed by executing the script requirements.jl:
 
 julia requirements.jl
 
-Note: If the installation of packages fails you might try again by appending the argument " latest" without quotes to the end of the command. If the packages install without a problem you do not need to do this.
+Note: If the installation of packages fails, you might try again with the command (if the packages installed the first time without a problem you do not need to do this): 
+
+julia requirements.jl latest
 
 ### Synthetic experiments
 
