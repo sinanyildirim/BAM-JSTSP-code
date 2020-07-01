@@ -10,4 +10,6 @@ The source code and the data for the two parts can be found under their respecti
 
 Please refer to the individual readme files under these folders for further instuctions.
 
-Contact Dr. Sinan Yıldırım through sinanyildirim at sabanciuniv.edu for questions and comments.
+Contact 
+- Part 1: Melih Barsbey through melih.barsbey@gmail.com;
+- Part 2: Dr. Sinan Yıldırım through sinanyildirim@sabanciuniv.edu.
