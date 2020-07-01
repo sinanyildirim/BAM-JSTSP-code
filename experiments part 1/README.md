@@ -63,4 +63,4 @@ This can be used for repeating the experiments provided in the article, or condu
 
 ### Exact replication of results
 
-For the exact numerical replications of the experiments, some additional effort is required. Since many experiments were conducted for the paper, they were separated into different runs, recombination of which requires some additional work which we automatized as much as possible. We provide the additional instructions for this exact replication in the file `exact_replication.txt`.
+For the _exact_ numerical replications of the experiments, some additional considerations is required. Since many experiments were conducted for the paper, they were separated into different runs, recombination of which requires some additional work. We automatized the majority of this work for the ease of the reader. We provide the additional instructions for this exact replication in the file `exact_replication.txt`.
