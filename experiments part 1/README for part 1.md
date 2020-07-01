@@ -9,7 +9,7 @@ The experiments in this part include:
 
 The experiments in this section are conducted using Linux OS and Julia programming language version 1.0.5, as well as Jupyter Notebook/Lab with the corresponding Julia kernel. Please visit https://julialang.org/ for information regarding installing Julia and its Jupyter notebook kernel.
 
-After installing Julia 1.0.5, the packages required by the experiments can be installed by executing the script requirements.jl:
+After installing Julia 1.0.5, the packages required by the experiments can be installed by executing the script `requirements.jl`:
 
 `julia requirements.jl`
 
@@ -53,9 +53,9 @@ After the experiment is conducted and completed, the script writes the numerical
 
 `results/<data_name>_<exp_name>/exp_a_<a>_N_<N>_EPOCHS_<EPOCHS>_f_<resamling_freq>_Rs_<R_start>:<R_end>.json`
 
-You can read, examine, and visualize results using your preferred software tool. You can also use the script icews_visualize.jl to conduct this visualisation after the results are produced. icews_visualize.jl takes the result file path as the argument such that:
+You can read, examine, and visualize results using your preferred software tool. You can also use the script `icews_visualize.jl` to conduct this visualisation after the results are produced. `icews_visualize.jl` takes the result file path as the argument such that:
 
-`julia icews_visualize.jl results/<data_name>_<exp_name>/exp_a_<a>_N_<N>_EPOCHS_<EPOCHS>_f_<resamling_freq>_Rs_<R_start>:<R_end>.json`
+`julia icews_visualize.jl <path>/<to>/<your>/<results>/<file>.json`
 
 This results in an image in a similar folder structre path: `img/<data_name>_<exp_name>/exp_a_<a>_N_<N>_EPOCHS_<EPOCHS>_f_<resamling_freq>_Rs_<R_start>:<R_end>.pdf`
 
