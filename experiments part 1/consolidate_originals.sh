@@ -22,6 +22,3 @@ julia icews_consolidate.jl icews_0.99_data_td_original 1.0 3750
 julia icews_consolidate.jl icews_0.99_data_cp_original 1.0 3750
 julia icews_consolidate.jl icews_0.99_data_cp_original 100.0 3750
 julia icews_consolidate.jl icews_0.99_data_cp_original 0.01 3750
-
-
-
