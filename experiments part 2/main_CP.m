@@ -8,8 +8,7 @@
 %% Clear variables and set the seed
 clc; clear; close all; fc = 0;
 
-rng_no = 1;
-rng(rng_no);
+rng_no = 1; rng(rng_no);
 
 %% Prepare data
 load('X_Q99');
