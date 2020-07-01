@@ -1,0 +1,4 @@
+for entry in results/consolidated/*/*
+do
+  echo "$entry"
+done

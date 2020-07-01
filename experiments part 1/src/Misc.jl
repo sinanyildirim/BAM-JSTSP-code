@@ -3,7 +3,8 @@ module Misc
 using Statistics, Clustering
 using JSON
 import DataStructures: PriorityQueue, peek
-import SpecialFunctions: lbeta, lgamma
+# preventing conflict between Misc and SpecialFunctions lbeta
+import SpecialFunctions: loggamma # lbeta, 
 import Base: sum, maximum, minimum
 import Statistics: mean
 import LinearAlgebra: norm
@@ -48,11 +49,11 @@ logmeanexp(X::AbstractArray, dims) = dropdims(logmeanexp(X; dims=dims),dims=dims
 logvarexp(X::AbstractArray; dims=nothing) = dims == nothing ? _logvarexp(X) : mapslices(_logvarexp, X; dims=dims)
 logvarexp(X::AbstractArray, dims) = dropdims(logvarexp(X; dims=dims),dims=dims)
 
-@inline _lbeta(X::AbstractArray) =  sum(lgamma, X) - lgamma(sum(X))
+@inline _lbeta(X::AbstractArray) =  sum(loggamma, X) - loggamma(sum(X))
 lbeta(X::AbstractArray; dims=nothing) = dims == nothing ? _lbeta(X) : mapslices(_lbeta, X; dims=dims)
 lbeta(X::AbstractArray, dims) = dropdims(lbeta(X; dims=dims),dims=dims)
 
-@inline _lbeta(γ::Number,I::Integer) = I*lgamma(γ) - lgamma(I*γ)
+@inline _lbeta(γ::Number,I::Integer) = I*loggamma(γ) - loggamma(I*γ)
 lbeta(γ::Number, sz::Vararg{Integer}; dims=nothing) = dims == nothing ? _lbeta(γ,prod(sz)) : fill(_lbeta(γ,prod(sz[dims])), map(t -> t[1] in dims ? 1 : t[2], enumerate(sz))...)
 
     

@@ -55,6 +55,29 @@ You can read, examine, and visualize results using your preferred software tool.
 
 julia icews_visualize.jl results/<data_name>_<exp_name>/exp_a_<a>_N_<N>_EPOCHS_<EPOCHS>_f_<resamling_freq>_Rs_<R_start>:<R_end>.json
 
-This results in an image in a similar folder structre path img/<data_name>_<exp_name>/exp_a_<a>_N_<N>_EPOCHS_<EPOCHS>_f_<resamling_freq>_Rs_<R_start>:<R_end>.pdf
+This results in an image in a similar folder structre path: img/<data_name>_<exp_name>/exp_a_<a>_N_<N>_EPOCHS_<EPOCHS>_f_<resamling_freq>_Rs_<R_start>:<R_end>.pdf
+
+This can be used for numerical replication of the experiments provided in the article.
+
+### Exact replication of results
+
+For the exact numerical replications of the experiments, some additional effort is required. Since many experiments were conducted for the paper, they were separated into different runs. We provide the additional instructions for this exact replication in the file exact_replication.txt.
+
+
+ For exact replications, the replicating experiments should also follow the same separations. The original result files will provide the blueprint for this. The three steps for this include 1- experiment replication, 2- result consolidation, 3- plotting (optional).
+
+1- All result files that have been used in the paper can be found in the folder results with endings "_original". Looking at the folder results/icews_0.95_data_cp_original/ as an example, which include the comparison of SMC vs VB under the CP model at X_0.95, we can see that for experiments with a = 1.0, two separate files exist:
+
+exp_a_1.0_N_17730_EPOCHS_100_f_0_Rs_2:17.json
+exp_a_1.0_N_17730_EPOCHS_100_f_0_Rs_18:25.json
+
+implying that the original experiments were completed in two runs, with Rs=2:17 and Rs=18:25 conducted separately. The replication attempt must also conduct the experiments in two different runs using same Rs, as well as the same number of particles (N=17730 as can be read from file name).
+
+In order to make replication easier, we kept the original experiment files for the CP and TD experiments under the name icews_experiments_original_cp.jl and icews_experiments_original_td.jl, which are the same with the icews_experiments.jl file, but the experiment settings are fixed to the settings in the paper. So to replicate the above experiments the user must run
+
+
+A look into the
+
+
 
 Tucker'da RRR
