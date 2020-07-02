@@ -18,6 +18,7 @@ try mkdir(img_folder) catch end
 results = parse(open(file_path, "r"));
 fontsize=14
 plt.ioff()
+
 _, _ = plot_comparison(results["num_results"], results["Rs"][1]:results["Rs"][end], title, fontsize; save=true, format="pdf");
 plt.close()
 
