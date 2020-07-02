@@ -1,6 +1,6 @@
 # Exact Numerical Replication of ICEWS Experiments
 
-This file is a continuation of the README.md file for the Part 1 of experiments. This file focuses on the "exact" numerical replications of the experiments (with random number generation controlled through random seeds).
+This file is a continuation of the README.md file for the Part 1 of experiments. This file focuses on the _exact_ numerical replications of the experiments (with random number generation controlled through random seeds).
 
 Since many experiments were conducted for the paper, they were separated into different runs. For exact numerical replications, the replicating experiments should also follow the same separations (since otherwise the different seed settings would produce different, albeit very similar results). The original result files provided in the folder `results/`, ending with *_original will provide the blueprint for this. The three steps required for the replication of experiments are 1- conducting the experiments in the same way, 2- consolidating results, 3- plotting the results (optional).
 
