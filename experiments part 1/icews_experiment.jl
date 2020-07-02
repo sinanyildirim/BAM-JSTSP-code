@@ -12,7 +12,6 @@ using .Viz_Logs, .Experiments, .Misc, .CP, .TD
 using FileIO, Dates, JSON, CSV, LinearAlgebra, NPZ, Distributions, Plots
 using Base.Iterators: flatten
 
-# 3750 17730 35190 78500 123140
 data_name = "icews_0.99_data" # choices are icews_{}_data where {} can take 0.99, 0.95, 0.9, 0.75, 0.5
 exp_type = "cp_comparison" # this is up to the user
 exp_name = "$(data_name)_$(exp_type)"

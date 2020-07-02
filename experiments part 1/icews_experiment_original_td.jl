@@ -13,11 +13,11 @@ using FileIO, Dates, JSON, CSV, LinearAlgebra, NPZ, Distributions, Plots
 using Base.Iterators: flatten
 
 # 3750 17730 35190 78500 123140      OLD: 3610 17780 30880 74630 120540
-data_name = "2017_week_0.5_quantile_quad_20_countries"
+data_name = "icews_0.99_data"
 exp_type = "td"
 exp_name = "$(data_name)_$(exp_type)"
 icews_data_file_prefix = "data/icews/$(data_name)"
-meths = [(TD, "smc"), (TD, "vb")] #[(CP, "smc"), (CP, "vb")] 
+meths = [(TD, "smc"), (TD, "vb")] #[(CP, "smc"), (CP, "vb")]
 M = [1, 1]
 adaptive = true
 # Resampling is default, if you want to prevent resampling, set resampling freq to T
